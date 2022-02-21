@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo">Fetch a file to change this text.</p>
+
+<script>
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(json => {
+  document.getElementById("demo").innerHTML=json.title+" jest twoim zadaniem"
+  console.log(json);
+  })
+</script>
+
+</body>
+</html>
